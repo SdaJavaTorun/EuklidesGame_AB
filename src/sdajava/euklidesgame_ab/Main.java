@@ -7,26 +7,25 @@ public class Main {
     public static void main(String[] args) {
 
         Random token = new Random();
-        int GamerA = token.nextInt(100);
-        int GamerB = token.nextInt(100);
+        int GamerA = token.nextInt(50);
+        int GamerB = token.nextInt(50);
         int pozostale = 0;
-        pozostale = GamerA + GamerB;
 
-        System.out.println("Gracz A :" + GamerA + " żetonów");
-        System.out.println("Gracz B :" + GamerB + " żetonów");
+
+        System.out.println("Gracz A :" + GamerA + " zetonow");
+        System.out.println("Gracz B :" + GamerB + " zetonow");
 
         while (GamerA !=0 && GamerB != 0) {
-            if (GamerA>GamerB)
-            {
+            if (GamerA>GamerB) {
                 GamerA = GamerA - GamerB;
-                System.out.println("Zetony A: " + GamerA);
+                System.out.println("Gracz A: " + GamerA);
             }
             else {
                 GamerB = GamerB - GamerA;
-                System.out.println("Zetony B: " + GamerB);
+                System.out.println("Grcz B: " + GamerB);
             }
         }
-
-        System.out.println("Koniec gry. " + pozostale);
+        pozostale = GamerA + GamerB;
+        System.out.println("Koniec gry. Pozostlo  " + pozostale +" zetonow");
     }
 }
